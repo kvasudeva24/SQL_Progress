@@ -27,9 +27,51 @@ INSERT INTO student(name, major) VALUES(
     'Kate', 'Sociology'
 );
 
+INSERT INTO student(name, major) VALUES(
+    'Claire', 'Chemistry'
+);
+
+INSERT INTO student(name, major) VALUES(
+    'Jack', 'Biology'
+);
+
+INSERT INTO student(name, major) VALUES(
+    'Mike', 'Computer Science'
+);
+
+
 
 --shows all the data in the table
 SELECT * FROM student;
+
+
+--update and delete
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology';
+
+UPDATE student
+SET major = "Comp Sci"
+WHERE major = "Computer Science";
+
+UPDATE student 
+SET major = "Comp Sci"
+WHERE student_id = 4;
+
+UPDATE student 
+SET name = "Tom", major = "Undecided"
+WHERE student_id = 1;
+
+--with no where it affefcts all rows
+UPDATE student
+SET major = 'Undecided';
+
+--same thing here with no delete it will delete all rows
+DELETE FROM student
+WHERE name = 'Tom' AND major = 'Undecided';
+
+DELETE FROM student;
+
 
 
 
