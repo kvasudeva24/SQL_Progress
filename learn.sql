@@ -11,32 +11,22 @@
  --n is after the decimal point
 
 CREATE TABLE student (
-    student_id INT PRIMARY KEY,
+    student_id INT AUTO_INCREMENT,
     name VARCHAR(20),
-    major VARCHAR(20)
+    major VARCHAR(20) ,
+    PRIMARY KEY(student_id)
 );
 --this is a database schema
 
 
-
-
-INSERT INTO student VALUES(
-    1, 'Kartik', 'CS'
+INSERT INTO student(name, major) VALUES(
+    'Jack', 'Biology'
 );
 
-INSERT INTO student VALUES(
-    2, 'John Pork', 'Finance'
+INSERT INTO student(name, major) VALUES(
+    'Kate', 'Sociology'
 );
 
---if you don't know all the values
---you can only do the ones you know 
-INSERT INTO student(student_id, name) VALUES(
-    3, 'Maria'
-);
-
-INSERT INTO student(student_id, name) VALUES(
-    4, 'Maria'
-);
 
 --shows all the data in the table
 SELECT * FROM student;
@@ -59,5 +49,4 @@ ALTER TABLE student DROP COLUMN gpa;
 
 --deletes table
 DROP TABLE student;
-
 
